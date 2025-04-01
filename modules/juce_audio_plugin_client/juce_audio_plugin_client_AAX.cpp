@@ -2506,6 +2506,13 @@ namespace AAXClasses
         properties->AddProperty (AAX_eProperty_SupportsSaveRestore, false);
        #endif
 
+        //--------------------------------------------------------------------------
+        // MOD submissionaudio
+
+        properties->AddProperty (AAX_eProperty_RequiresChunkCallsOnMainThread, true);
+
+        //--------------------------------------------------------------------------
+        
         properties->AddProperty (AAX_eProperty_ObservesTransportState, true);
 
         if (fullLayout.getChannelSet (true, 1) == AudioChannelSet::mono())
